@@ -1,17 +1,24 @@
-# streaming-platform
-A simple platform for live streaming 
+# README
 
-## Framework
-- Livekit
-- Ruby on Rails
-- Docker
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-# Usecase 
-Create a streaming platform where people can create a room, stream live video, 
+Things you may want to cover:
 
-# Plan
-[ ] Create a hompage for the platform where you can register a user or login, you can also choose to continue as a guest
-[ ] Make it possible for admin to distribute permissions to users account. E.g. Admin, Moderator, View
+* Ruby version
 
+* System dependencies
 
-# Dev container for ruby on rails.
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...

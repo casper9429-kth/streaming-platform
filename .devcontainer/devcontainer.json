@@ -1,6 +1,8 @@
 {
   "name": "Ruby Development",
-  "image": "ruby:3.2",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
     "ghcr.io/devcontainers/features/git:1": {}
@@ -14,5 +16,6 @@
     }
   },
   "postCreateCommand": "gem install bundler && bundle install",
-  "remoteUser": "root"
+  "remoteUser": "root",
+  "forwardPorts": [5432]
 }

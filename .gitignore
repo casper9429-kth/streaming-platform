@@ -85,3 +85,6 @@ build-iPhoneSimulator/
 
 # Dev container specific
 postgres-data
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key

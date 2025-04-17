@@ -1,12 +1,9 @@
 FROM ruby:3.2
 
-# Install additional dependencies
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    nodejs \
+# Install PostgreSQL client and other needed packages
+RUN apt-get update && apt-get install -y --no-install-recommends \
     postgresql-client \
-    --no-install-recommends && \
-    rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/lib/apt/lists/*
 
 # Create a non-root user to use if preferred
 ARG USERNAME=vscode
