@@ -1,5 +1,5 @@
 {
-  "name": "Ruby Rails Development",
+  "name": "Ruby Development",
   "image": "ruby:3.2",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {},
@@ -9,15 +9,10 @@
     "vscode": {
       "extensions": [
         "rebornix.ruby",
-        "wingrunr21.vscode-ruby",
-        "castwide.solargraph",
-        "kaiwood.endwise"
-      ],
-      "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-      }
+        "castwide.solargraph"
+      ]
     }
   },
-  "postCreateCommand": "gem install rails",
-  "remoteUser": "vscode"
+  "postCreateCommand": "gem install bundler && bundle install",
+  "remoteUser": "root"
 }
