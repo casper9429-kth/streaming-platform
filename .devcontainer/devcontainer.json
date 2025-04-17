@@ -1,0 +1,44 @@
+{
+  "name": "Ruby on Rails Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rebornix.ruby",
+        "castwide.solargraph",
+        "kaiwood.endwise",
+        "aliariff.vscode-erb-beautify",
+        "jnbt.vscode-rufo",
+        "wingrunr21.vscode-ruby",
+        "ms-azuretools.vscode-docker",
+        "mtxr.sqltools"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "files.trimTrailingWhitespace": true,
+        "ruby.useBundler": true,
+        "ruby.useLanguageServer": true,
+        "ruby.lint": {
+          "rubocop": true
+        }
+      }
+    }
+  },
+
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  
+  "forwardPorts": [3000, 5432],
+  
+  "postCreateCommand": "bundle install && yarn install && bin/rails db:setup",
+  
+  "remoteUser": "vscode"
+}
